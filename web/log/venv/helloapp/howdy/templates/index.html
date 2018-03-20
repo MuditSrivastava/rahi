@@ -1,0 +1,32 @@
+<!-- howdy/templates/index.html -->
+
+{% extends 'base.html' %} <!-- Add this for inheritance -->
+{% load socialaccount %}
+{% providers_media_js %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}Howdy!{% endblock %}</title>
+        <br>
+    </head>
+    <body style="background-color:powderblue;">
+      {% block pagecontent %}
+        <h1 style="color:blue"><p style="text-align:center;" style="font-size:55px;" ><strong>Life Of VAIBHAV GOYAL(Great Enterpreneur)</strong></p>
+        </h1>
+        
+        <img  style="float: left;" src="/static/img/12.jpg" alt="VAIBHAV THE GREAT" width="800" height="800" >
+       <a href="{% provider_login_url "facebook" method="js_sdk" %}" class="btn btn-block btn-social btn-facebook" style="background-color:#3b5998;text-align:center">
+  <span class="fa fa-facebook"></span>
+               Sign in with Facebook
+        </a>
+       <!-- <a href="/about/">About Me</a>
+        <br>
+        <p></p>
+        <a href="photo">Photos</a> -->
+        {% include 'partials/nav-bar.html' %}
+      {% endblock %}
+    </body>
+</html>
+    

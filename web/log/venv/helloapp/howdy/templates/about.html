@@ -1,0 +1,29 @@
+<!-- howdy/templates/about.html -->
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+    <style> p.dotted{border-style: dotted;}</style>
+        <meta charset="utf-8">
+        <title>Howdy!</title>
+    </head>
+
+    <script src="{% static 'js/main.js' %}"></script> <!-- This is how to include a static file -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" />
+    <body style="background-color:powderblue;">
+     <div class="container">
+        <h1>Welcome to the about page</h1>
+    <p class="dotted"> 
+    My name is Vaibhav Goyal.I m currently working as an intern at Autogrid.I will about to start my final year from mid july.New challenges will come to me and I have to make me ready to face them.
+        </p>
+        <button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+
+    <a href="/">Go back home</a>
+     </div>
+    </body>
+</html>
